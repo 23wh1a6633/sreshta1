@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { FloatingDecor } from "./FloatingDecor";
 
-export function SurpriseScreen({ onClick }: { onClick: () => void }) {
+export function SurpriseScreen(props: Readonly<{ onClick: () => void }>) {
+  const { onClick } = props;
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -19,7 +20,7 @@ export function SurpriseScreen({ onClick }: { onClick: () => void }) {
           animate={{ y: [0, -6, 0] }}
           transition={{ duration: 3, repeat: Infinity }}
         >
-          ♡ for HARSH ♡
+          ♡ for SRESHTA ♡
         </motion.h1>
         <motion.button
           onClick={onClick}
@@ -32,7 +33,7 @@ export function SurpriseScreen({ onClick }: { onClick: () => void }) {
             boxShadow: "var(--shadow-pixel)",
           }}
         >
-          ✦ Click for Surprise ✦
+          ✦ OPEN ✦
         </motion.button>
         <p className="text-pink-400" style={{ fontFamily: "var(--font-hand)", fontSize: "1.6rem" }}>
           made with love
